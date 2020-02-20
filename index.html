@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <div class="help-text">
+        <p>Steps to see something cool.</p>
+        <ol>
+            <li>View the current page on your phone and allow camera access.</li>
+            <li>Print out <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1094264/HIRO.jpg" target="_blank">this marker</a> or view it on your desktop.</li>
+            <li>Use your phone camera to view the marker to see something cool.</li>
+        </ol>
+        <div class="help-text_close" onclick="this.parentElement.style.display = 'none';">Close help text</div>
+    </div>
+    <a-scene embedded arjs='sourceType: webcam;' gltf-model="dracoDecoderPath: model/draco/;">
+        <a-marker preset='hiro'>
+            <a-entity scale="0.2, 0.2, 0.2" position="0,0,0" gltf-model="url(model/glass-bong.glb)"></a-entity>
+        </a-marker>
+        <a-entity camera>
+        </a-entity>
+    </a-scene>
+    <script>
+
+    </script>
+</body>
+
+</html>
