@@ -11,6 +11,7 @@ body {
 .content-container {
   margin: 0 auto;
   max-width: 512px;
+  width: 100%;
 }
 
 .hiro-marker {
